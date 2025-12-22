@@ -9,8 +9,6 @@ warnings.filterwarnings('ignore')
 
 
 class PSOPIDOptimizer:
-   """Класс для оптимизации PID-параметров методом роя частиц"""
-
    def __init__(self, n_particles=30, max_iter=50, w=0.7, c1=1.4, c2=1.4):
        self.n_particles = n_particles  # количество частиц
        self.max_iter = max_iter  # максимальное количество итераций
@@ -18,7 +16,7 @@ class PSOPIDOptimizer:
        self.c1 = c1  # коэффициент когнитивной компоненты
        self.c2 = c2  # коэффициент социальной компоненты
 
-       # Границы поиска для параметров [kp_angle, ki_angle, kd_angle, kp_pos, ki_pos, kd_pos]
+       # Границы поиска для параметров
        self.bounds = np.array([
            [10, 200],  # kp_angle
            [0.1, 10],  # ki_angle
